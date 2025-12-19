@@ -1,0 +1,113 @@
+.new-message-container {
+    background-color: #f0f2f5;
+    padding: 10px 16px;
+    /* Matches header padding for alignment */
+    display: flex;
+    align-items: flex-end;
+    /* Align bottom if text grows */
+    border-top: 1px solid #d1d7db;
+    min-height: 62px;
+    /* Standard height area */
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 10;
+}
+
+.new-message-form {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.new-message-input {
+    flex: 1;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    /* Explicit border usually doesn't exist but white bg does */
+    background-color: #ffffff;
+    font-size: 15px;
+    line-height: 20px;
+    /* Comfortable reading height */
+    outline: none;
+    color: #3b4a54;
+    min-height: 20px;
+    width: 100%;
+    margin: 5px 0;
+    /* Align with button */
+    font-family: inherit;
+    /* Ensure font matches */
+}
+
+/* .new-message-input:focus { } */
+
+.input-left-icons {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #54656f;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.1s ease;
+}
+
+.icon-button:hover {
+    color: #3b4a54;
+}
+
+.icon-button svg {
+    width: 26px;
+    height: 26px;
+}
+
+.new-message-input::placeholder {
+    color: #8696a0;
+}
+
+/* Visually hide label but keep for a11y */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.send-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #54656f;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.1s ease;
+    margin-bottom: 2px;
+    /* Alignment tweak */
+}
+
+/* When active/typing, WA often turns the mic button to a send plane. 
+   Assuming this button is always visible as send for now. */
+.send-button:hover {
+    color: #3b4a54;
+}
+
+/* Optional: Icon size consistency */
+.send-button svg {
+    width: 24px;
+    height: 24px;
+}

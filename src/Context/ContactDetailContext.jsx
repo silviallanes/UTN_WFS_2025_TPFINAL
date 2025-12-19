@@ -1,27 +1,18 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Outlet, useParams } from "react-router";
-import { getContactById } from "../services/contactService";
-
+import { ContactListContext } from "./ContactListContext";
 export const ContactDetailContext = createContext()
 
 const ContactDetailContextProvider = () => {
-    const parametros_url = useParams()
-    const contact_id = parametros_url.contact_id
-    const [contactSelected, setContactSelected] = useState(null)
-    const [loadingContact, setLoadingContact] = useState(true)
-    function loadContactById (){
-        setLoadingContact(true)
-        setTimeout(
-            function () {
-                const contact = getContactById(contact_id)
-                setContactSelected(contact)
-                setLoadingContact(false)
-            },
-            2000
-        )
-    }
+    const { contact_id } = useParams()
+    const { getContactById, updateContactById, loadingContactsState } = useContext(ContactListContext)
 
-    function addNewMessage (content){
+    // Derived state directly from the list context
+    const contactSelected = getContactById(contact_id)
+
+    function addNewMessage(content) {
+        if (!contactSelected) return;
+
         const new_message = {
             message_id: contactSelected.messages.length + 1,
             message_content: content,
@@ -41,26 +32,20 @@ const ContactDetailContextProvider = () => {
         /* Guardamos la nueva lista clonada modificada */
         contactSelectedCloned.messages = messagesCloned
 
-        /* Seteamos el contacto seleccionado con la lista de mensajes actualizada */
-        setContactSelected(contactSelectedCloned)
+        /* actualizo el contacto con el nuevo mensaje */
+        updateContactById(contactSelectedCloned, contact_id)
     }
-
-    useEffect(
-        loadContactById,
-        [parametros_url.contact_id]
-    )
 
     const providerValues = {
         contactSelected,
-        loadingContact,
-        loadContactById,
-        addNewMessage
+        addNewMessage,
+        loadingContactsState // Pass this down so consumers can handle loading
     }
 
-    
+
     return (
         <ContactDetailContext.Provider value={providerValues}>
-            <Outlet/>
+            <Outlet />
         </ContactDetailContext.Provider>
     )
 }

@@ -1,4 +1,153 @@
-.aside-dark{
-    background-color: black;
-    color: white;
+/* Basic Sidebar Layout */
+.aside {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    /* Standard WA Web Sidebar width */
+    max-width: 450px;
+    height: 100vh;
+    border-right: 1px solid #d1d7db;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.aside-dark {
+    background-color: #111b21;
+    color: #e9edef;
+    border-right: 1px solid #2f3b43;
+    /* Dark mode border */
+}
+
+/* Header Styles */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    height: 59px;
+    /* Precise height */
+    background-color: #f0f2f5;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-right: 1px solid #d1d7db;
+    /* Continuation of border */
+}
+
+.aside-dark .sidebar-header {
+    background-color: #202c33;
+    border-right: 1px solid #2f3b43;
+}
+
+.profile-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dfe5e7;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #54656f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-btn:hover {
+    background-color: #d9dbde;
+    /* Slightly darker on hover */
+}
+
+.aside-dark .icon-btn {
+    color: #aebac1;
+}
+
+.aside-dark .icon-btn:hover {
+    background-color: #37404a;
+}
+
+
+/* Search Container Styles */
+.search-container {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e9edef;
+    /* Gentle divider */
+    background-color: #ffffff;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.aside-dark .search-container {
+    background-color: #111b21;
+    border-bottom: 1px solid #202c33;
+    /* Dark divider usually matches header/list bg or slightly different */
+}
+
+/* Contacts Container - Scrollable area */
+.contacts-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+/* Custom Scrollbar */
+.contacts-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contacts-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.aside-dark .contacts-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.aside-dark .contacts-container {
+    background-color: #111b21;
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 900px) {
+    .aside {
+        width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aside {
+        width: 100%;
+        max-width: 100%;
+        border-right: none;
+    }
 }
