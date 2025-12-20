@@ -1,12 +1,16 @@
 .messages-list-container {
     flex: 1;
     overflow-y: auto;
-    padding: 20px 5% 40px;
-    /* Extra bottom padding */
+    padding: 20px 8% 10px;
+    /* More side padding like desktop WhatsApp */
     display: flex;
     flex-direction: column;
     gap: 2px;
-    /* Very small gap between clustered messages */
+    background-color: #efeae2;
+    /* WhatsApp background color */
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    /* Subtle doodle background pattern */
+    background-repeat: repeat;
 }
 
 /* Custom Scrollbar for messages */
@@ -15,7 +19,7 @@
 }
 
 .messages-list-container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(11, 20, 26, 0.2);
 }
 
 /* Estilo base del mensaje */
@@ -40,7 +44,25 @@
     border-top-right-radius: 0;
 }
 
-/* Optional: Little triangle for speech bubble effect could be added with ::before */
+/* Speech bubble tail for my message */
+.message-bubble.my-message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 8px;
+    height: 13px;
+    background-color: #d9fdd3;
+    border-top-right-radius: 100%;
+    /* curve the other way */
+    border-bottom: 8px solid transparent;
+    /* Clip it to shape if needed, or use a specific svg/shape. 
+       Simple triangle/curve approach: */
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+    /* Tricky to shadow pseudo elements easily without svg, but this covers colored background */
+}
+
 
 /* Mensajes recibidos (izquierda, blanco) */
 .message-bubble.other-message {
@@ -49,41 +71,54 @@
     border-top-left-radius: 0;
 }
 
+/* Speech bubble tail for other message */
+.message-bubble.other-message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 8px;
+    height: 13px;
+    background-color: #ffffff;
+    border-top-left-radius: 100%;
+    /* Flip the clip for left side */
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+}
+
 .message-content {
-    margin-bottom: 2px;
-    padding-right: 20px;
-    /* Space for the time */
+    margin-bottom: 0px;
+    padding-right: 0px;
+    /* remove rigid padding, let meta flow or sit beside if short */
 }
 
 .message-meta {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 4px;
-    margin-top: -4px;
-    /* Pull up to sit nicely */
+    display: inline-block;
     float: right;
-    /* Often used to float time in bubble */
+    margin-left: 7px;
+    margin-top: 4px;
+    /* push down slightly relative to text baseline */
+    margin-bottom: -5px;
+    /* pull up bottom padding of container */
     position: relative;
     top: 3px;
-    padding-left: 8px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 .message-time {
     font-size: 11px;
     color: #667781;
-    height: 15px;
-    line-height: 15px;
+    vertical-align: middle;
 }
 
 .message-status {
     font-size: 16px;
+    /* Icon size */
     color: #53bdeb;
     /* Blue for read */
     display: flex;
     align-items: center;
 }
-
-/* Differentiate status colors if data supported it */
-/* .message-status.read { color: #53bdeb; } */
-/* .message-status.sent { color: #8696a0; } */

@@ -4,6 +4,8 @@ import ContactSidebar from '../../Components/ContactSidebar/ContactSidebar'
 import { ContactDetailContext } from '../../Context/ContactDetailContext'
 import MessagesList from '../../Components/MessagesList/MessagesList'
 import AddNewMessage from '../../Components/AddNewMessage/AddNewMessage'
+import { LuVideo, LuSearch,LuEllipsisVertical } from "react-icons/lu";
+
 
 
 export default function MessagesScreen() {
@@ -51,6 +53,15 @@ export default function MessagesScreen() {
                     </div>
                     <div className='header-actions'>
                         {/* Placeholder for header actions like search, menu etc. */}
+                        <button className="icon-btn" title="Videollamada">
+                            <LuVideo size={20} />
+                        </button>
+                        <button className="icon-btn" title="Buscar mensaje">
+                            <LuSearch size={20} />
+                        </button>
+                        <button className="icon-btn" title="Menú">
+                            <LuEllipsisVertical size={20} />
+                        </button>
                     </div>
                 </div>
 

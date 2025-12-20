@@ -24,13 +24,14 @@ const MessagesList = () => {
                                 {isMyMessage && (
                                     <span className='message-status'>
                                         {/* Simple check mark icon simulation */}
-                                        {message.message_state === 'VISTO' ? '✓✓' : '✓'}
+                                        {message.message_state === 'SEEN' ? '✓✓' : '✓'}
                                     </span>
                                 )}
                             </div>
                         </div>
                     );
                 })
+                
             }
         </div>
     )

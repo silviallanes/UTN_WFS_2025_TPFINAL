@@ -9,6 +9,8 @@ import { useContext } from 'react'
 import ContactSearchForm from '../ContactSearchForm/ContactSearchForm'
 import ContactList from '../ContactList/ContactList'
 import { ThemeContext } from '../../Context/ThemeContext'
+import { LuEllipsisVertical, LuMessageSquarePlus } from "react-icons/lu";
+
 
 export default function ContactSidebar() {
     const { isDark, toggleTheme } = useContext(ThemeContext)
@@ -20,7 +22,7 @@ export default function ContactSidebar() {
                         <img className="contact-avatar" src="https://media-eze1-2.cdn.whatsapp.net/v/t61.24694-24/491869305_3656823064617681_9124250933866114570_n.jpg?stp=dst-jpg_s96x96_tt6&ccb=11-4&oh=01_Q5Aa3QHRbHsHa8GkOQ9ufa765gsYpO1xJI61tDLhmPu2Rwn49Q&oe=695198A8&_nc_sid=5e03e0&_nc_cat=111" alt="Perfil" />
                     </div>
                 </div>
-                <div className="header-actions">
+                {/* <div className="header-actions">
                     <button className="icon-btn" title="Comunidades">
                         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 20.664a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17ZM12 22.5c5.799 0 10.5-4.701 10.5-10.5S17.799 1.5 12 1.5 1.5 6.201 1.5 12 6.201 22.5 12 22.5ZM12 6.6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z M12 10.5a1 1 0 0 1 1 1v5a1 1 0 0 1-2 0v-5a1 1 0 0 1 1-1Z"></path></svg>
                     </button>
@@ -33,11 +35,34 @@ export default function ContactSidebar() {
                     <button className="icon-btn" title="Menú" onClick={toggleTheme}>
                         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7Zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9Zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15Z"></path></svg>
                     </button>
+                </div> */}
+                <div className='header-actions'>
+                    <LuMessageSquarePlus
+                        size={24}
+                        style={{ cursor: 'pointer' }}
+                        className="text-gray-500 hover:text-blue-600 transition-colors cursor-pointer"
+                        title="Nuevo chat" />
+                    <LuEllipsisVertical
+                        size={24}
+                        style={{cursor: 'pointer'}}
+                        title='Menu' />
+                    {/* <button className="icon-btn" title="Menú">
+                        <LuEllipsisVertical size={24} />
+                    </button> */}
+
                 </div>
+
             </header>
             <div className="search-container">
                 <ContactSearchForm />
             </div>
+            {/* <div className="filter-buttons-container">
+                <button className="filter-btn">Todos</button>
+                <button className="filter-btn">No leídos</button>
+                <button className="filter-btn">Favoritos</button>
+                <button className="filter-btn">Grupos</button>
+            </div> */}
+
             <div className="contacts-container">
                 <ContactList />
             </div>

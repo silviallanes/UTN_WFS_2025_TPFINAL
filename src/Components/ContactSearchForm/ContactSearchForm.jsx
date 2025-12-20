@@ -10,9 +10,9 @@ export default function ContactSearchForm() {
         </span>
         <input type="text" placeholder="Buscar chat o iniciar uno nuevo" className="search-input" />
       </div>
-      <button className="filter-btn" title="Filtro de chats no leídos">
+      {/* <button className="filter-btn" title="Filtro de chats no leídos">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 18.1h4v-2h-4v2Zm-7-12v2h18v-2H3Zm3 7h12v-2H6v2Z"></path></svg>
-      </button>
+      </button> */}
     </div>
   )
 }

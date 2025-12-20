@@ -125,12 +125,36 @@
 
 /* Optional 'last seen' or status text could go here */
 
-.header-actions {
+/* .header-actions {
     display: flex;
     gap: 20px;
     color: #54656f;
     align-items: center;
     padding-left: 20px;
+} */
+
+/* Grupo de iconos (Derecha) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre los 3 iconos */
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #040c11;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Efecto sutil de click */
 }
 
 /* Loading state */
