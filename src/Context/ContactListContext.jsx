@@ -8,8 +8,6 @@ const ContactListContextProvider = () => {
     const [contactState, setContactState] = useState([])
     const [loadingContactsState, setLoadingContactState] = useState(true)
 
-
-
     function loadContactList (){
         setLoadingContactState(true)
         setTimeout(

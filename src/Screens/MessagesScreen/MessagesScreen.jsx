@@ -6,8 +6,6 @@ import MessagesList from '../../Components/MessagesList/MessagesList'
 import AddNewMessage from '../../Components/AddNewMessage/AddNewMessage'
 import { LuVideo, LuSearch,LuEllipsisVertical } from "react-icons/lu";
 
-
-
 export default function MessagesScreen() {
 
     const {

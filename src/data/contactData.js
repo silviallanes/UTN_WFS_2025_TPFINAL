@@ -188,6 +188,7 @@ const contact_data = [
                 message_created_at: new Date(),
                 send_by_me: false
             }
+            
         ]
     }
 
