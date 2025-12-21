@@ -188,6 +188,25 @@ const contact_data = [
                 message_created_at: new Date(),
                 send_by_me: false
             }
+        ]
+    },
+    {
+        contact_id: 7,
+        contact_name: '+54 9 362 4226880',
+        contact_avatar: 'https://tse2.mm.bing.net/th/id/OIP._wBb0zSW4SrlHG1jCjL2xQHaHa?pid=Api&P=0&h=180',
+        contact_unseen_messages: 1,
+        last_message_content: 'Quería saber si está a la venta la bici',
+        last_message_state: 'UNSEEN',
+        last_message_created_at: new Date(),
+        messages: [
+            {
+                message_id: 1,
+                message_content: 'Quería saber si está a la venta la bici',
+                message_state: 'UNSEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            }
+              
             
         ]
     }

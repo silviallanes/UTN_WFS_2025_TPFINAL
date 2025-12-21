@@ -10,7 +10,7 @@ import { ThemeContext } from '../../Context/ThemeContext'
 import { LuEllipsisVertical, LuMessageSquarePlus } from "react-icons/lu";
 
 export default function ContactSidebar() {
-    const {isDark, toggleTheme} = useContext(ThemeContext)
+    const { isDark, toggleTheme } = useContext(ThemeContext)
 
     return (
         <aside className={`aside ` + (isDark ? 'aside-dark' : '')}>
@@ -28,21 +28,21 @@ export default function ContactSidebar() {
                         title="Nuevo chat" />
                     <LuEllipsisVertical
                         size={24}
-                        style={{cursor: 'pointer'}}
+                        style={{ cursor: 'pointer' }}
                         title='Menu' />
-                    
+
                 </div>
             </header>
-       
+
             <div className="search-container">
                 <ContactSearchForm />
             </div>
-            {/* <div className="filter-buttons-container">
-                <button className="filter-btn">Todos</button>
-                <button className="filter-btn">No leídos</button>
-                <button className="filter-btn">Favoritos</button>
-                <button className="filter-btn">Grupos</button>
-            </div> */}
+            <div className="filter-buttons-container">
+                <button className="filter-chip active">Todos</button>
+                <button className="filter-chip">No leídos</button>
+                <button className="filter-chip">Favoritos</button>
+                <button className="filter-chip">Grupos</button>
+            </div>
 
             <div className="contacts-container">
                 <ContactList />

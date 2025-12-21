@@ -62,7 +62,7 @@
     flex-direction: row;
     gap: 10px;
     align-items: right;
-    
+
 }
 
 .icon-btn {
@@ -138,39 +138,50 @@
 }
 
 /* Filter Button Styles */
-.filter-btn {
+.filter-chip {
     background-color: #f0f2f5;
     color: #54656f;
-    padding: 6px 12px;
-    border-radius: 10px;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 24px;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
     font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.filter-btn:first-child {
-    background-color: #d9fdd3;
-    color: #111b21;
-}
-
-.filter-btn:first-child:hover {
-    background-color: #c8f7c0;
-}
-
-.filter-btn:hover {
+.filter-chip:hover {
     background-color: #d9dbde;
 }
 
-.aside-dark .filter-btn {
-    background-color: #202c33;
-    color: #8696a0;
-    /* Darker grey bg for buttons in dark mode usually, or lighter than main bg */
-    background-color: #2a3942;
+.filter-chip.active {
+    background-color: #d9fdd3;
+    /* WhatsApp green for active filter */
+    color: #008069;
 }
 
-.aside-dark .filter-btn:hover {
+.filter-chip.active:hover {
+    background-color: #c8f7c0;
+}
+
+.aside-dark .filter-chip {
+    background-color: #202c33;
+    color: #8696a0;
+}
+
+.aside-dark .filter-chip:hover {
     background-color: #37404a;
+}
+
+.aside-dark .filter-chip.active {
+    background-color: #005c4b;
+    color: #e9edef;
+}
+
+.aside-dark .filter-chip.active:hover {
+    background-color: #0d6858;
 }
 
 /* Contacts Container - Scrollable area */
