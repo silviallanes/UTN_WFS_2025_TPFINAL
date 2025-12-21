@@ -12,6 +12,16 @@
     }
 }
 
+@media (max-width: 900px) {
+    .welcome-area {
+        padding: 0 20px;
+    }
+
+    .welcome-title {
+        font-size: 26px;
+    }
+}
+
 .welcome-area {
     flex: 1;
     display: flex;
@@ -30,7 +40,8 @@
 }
 
 .welcome-image {
-    width: 320px;
+    max-width: 320px;
+    width: 80%;
     height: auto;
     object-fit: contain;
 }

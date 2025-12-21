@@ -123,12 +123,12 @@
     /* Hide scrollbar but allow scroll if needed */
     scrollbar-width: none;
     /* Firefox */
-
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .filter-buttons-container::-webkit-scrollbar {
     display: none;
-
     /* Chrome/Safari */
 }
 
