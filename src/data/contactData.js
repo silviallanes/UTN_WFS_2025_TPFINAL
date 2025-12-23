@@ -3,7 +3,7 @@ const contact_data = [
     {
         contact_id: 1,
         contact_name: 'Maria',
-        contact_avatar: 'https://img.freepik.com/fotos-premium/mujer-gato-tendido-cama-casa_1048944-10042917.jpg',
+        contact_avatar: '/maria.jpg',
         contact_unseen_messages: 1,
         last_message_content: 'También hay que anexar gráficos',
         last_message_state: 'RECEIVED',/*'NOT_SEND' | 'NOT_RECEIVED' | 'RECEIVED' | 'SEEN'*/
@@ -36,7 +36,7 @@ const contact_data = [
     {
         contact_id: 2,
         contact_name: 'Juan',
-        contact_avatar: 'https://img.freepik.com/fotos-premium/hombre-visitando-parques-nacionales-viajando-mundo_191555-6513.jpg',
+        contact_avatar: '/juan.jpg',
         contact_unseen_messages: 0,
         last_message_content: 'avisame lo que necesites',
         last_message_state: 'SEEN',
@@ -69,7 +69,7 @@ const contact_data = [
     {
         contact_id: 3,
         contact_name: 'Claudia-Grupo Trabajo',
-        contact_avatar: 'https://img.freepik.com/fotos-premium/grupo-personas-trabajando-computadoras-oficina_1072138-55526.jpg',
+        contact_avatar: '/claudia-grupo.jpg',
         contact_unseen_messages: 0,
         last_message_content: 'Ya la estoy preparando...',
         last_message_state: 'SEEN',
@@ -102,7 +102,7 @@ const contact_data = [
     {
         contact_id: 4,
         contact_name: 'Veterinario',
-        contact_avatar: 'https://up.yimg.com/ib/th/id/OIP.Pq8xngvWZFAiMWjKmSluZgHaE8?pid=Api&rs=1&c=1&qlt=95&w=144&h=96',
+        contact_avatar: '/veterinario.jpg',
         contact_unseen_messages: 0,
         last_message_content: 'Ya está agendado',
         last_message_state: 'SEEN',
@@ -135,7 +135,7 @@ const contact_data = [
     {
         contact_id: 5,
         contact_name: 'Mamá',
-        contact_avatar: 'https://thumbs.dreamstime.com/b/retrato-de-la-se%C3%B1ora-mayor-2369131.jpg',
+        contact_avatar: '/mama.jpg',
         contact_unseen_messages: 1,
         last_message_content: 'te estamos esperando!!',
         last_message_state: 'RECEIVED',/*'NOT_SEND' | 'NOT_RECEIVED' | 'RECEIVED' | 'SEEN'*/
@@ -193,7 +193,7 @@ const contact_data = [
     {
         contact_id: 7,
         contact_name: '+54 9 362 4226880',
-        contact_avatar: 'https://tse2.mm.bing.net/th/id/OIP._wBb0zSW4SrlHG1jCjL2xQHaHa?pid=Api&P=0&h=180',
+        contact_avatar: '/avatar_generico.jpg',
         contact_unseen_messages: 1,
         last_message_content: 'Quería saber si está a la venta la bici',
         last_message_state: 'UNSEEN',
