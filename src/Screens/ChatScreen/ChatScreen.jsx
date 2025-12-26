@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import './ChatScreen.css'
 import ContactSidebar from '../../Components/ContactSidebar/ContactSidebar'
-import { ThemeContext } from '../../Context/ThemeContext'
 
 export default function ChatScreen() {
   // Assuming ThemeContext might be needed for conditional classes if not handled by CSS selectors alone

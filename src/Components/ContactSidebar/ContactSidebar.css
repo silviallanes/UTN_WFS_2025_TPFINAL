@@ -2,22 +2,13 @@
 .aside {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    /* Standard WA Web Sidebar width */
+    width: 100%; /* Por defecto ocupa el ancho disponible */
     max-width: 450px;
+    min-width: 300px;
     height: 100vh;
     border-right: 1px solid #d1d7db;
     background-color: #ffffff;
     overflow: hidden;
-    position: relative;
-    z-index: 100;
-}
-
-.aside-dark {
-    background-color: #111b21;
-    color: #e9edef;
-    border-right: 1px solid #2f3b43;
-    /* Dark mode border */
 }
 
 /* Header Styles */
@@ -26,18 +17,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
-    height: 59px;
-    /* Precise height */
+    height: 60px;
     background-color: #f0f2f5;
     flex-shrink: 0;
-    box-sizing: border-box;
-    border-right: 1px solid #d1d7db;
-    /* Continuation of border */
-}
-
-.aside-dark .sidebar-header {
-    background-color: #202c33;
-    border-right: 1px solid #2f3b43;
 }
 
 .profile-container {
@@ -88,14 +70,6 @@
     /* Slightly darker on hover */
 }
 
-.aside-dark .icon-btn {
-    color: #aebac1;
-}
-
-.aside-dark .icon-btn:hover {
-    background-color: #37404a;
-}
-
 
 /* Search Container Styles */
 .search-container {
@@ -106,12 +80,6 @@
     flex-shrink: 0;
     box-sizing: border-box;
     z-index: 10;
-}
-
-.aside-dark .search-container {
-    background-color: #111b21;
-    border-bottom: 1px solid #202c33;
-    /* Dark divider usually matches header/list bg or slightly different */
 }
 
 /* Filter Buttons Container */
@@ -132,24 +100,17 @@
     /* Chrome/Safari */
 }
 
-.aside-dark .filter-buttons-container {
-    background-color: #111b21;
-    border-bottom: 1px solid #202c33;
-}
-
 /* Filter Button Styles */
 .filter-chip {
-    background-color: #f0f2f5;
+   background-color: #f0f2f5;
     color: #54656f;
-    padding: 7px 16px;
+    padding: 6px 16px;
     border: none;
-    border-radius: 24px;
-    font-size: 14px;
+    border-radius: 100px;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    font-weight: 500;
-    white-space: nowrap;
     flex-shrink: 0;
+    font-weight: 500;
 }
 
 .filter-chip:hover {
@@ -158,30 +119,10 @@
 
 .filter-chip.active {
     background-color: #d9fdd3;
-    /* WhatsApp green for active filter */
     color: #008069;
 }
-
 .filter-chip.active:hover {
     background-color: #c8f7c0;
-}
-
-.aside-dark .filter-chip {
-    background-color: #202c33;
-    color: #8696a0;
-}
-
-.aside-dark .filter-chip:hover {
-    background-color: #37404a;
-}
-
-.aside-dark .filter-chip.active {
-    background-color: #005c4b;
-    color: #e9edef;
-}
-
-.aside-dark .filter-chip.active:hover {
-    background-color: #0d6858;
 }
 
 /* Contacts Container - Scrollable area */
@@ -201,16 +142,10 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.aside-dark .contacts-container::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
-.aside-dark .contacts-container {
-    background-color: #111b21;
-}
 
 /* Responsive Mobile Styles */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .aside {
         width: 350px;
     }
@@ -222,4 +157,16 @@
         max-width: 100%;
         border-right: none;
     }
+} */
+ .contact-sidebar {
+  flex: 0 0 30%;
+  max-width: 555px;
+  height: 100dvh;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-sidebar {
+    border-right: none;
+    max-width: 100%;
+  }
 }

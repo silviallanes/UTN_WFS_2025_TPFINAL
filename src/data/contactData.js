@@ -168,7 +168,7 @@ const contact_data = [
     {
         contact_id: 6,
         contact_name: 'Hugo',
-        contact_avatar: 'https://media-eze1-2.cdn.whatsapp.net/v/t61.24694-24/564883564_823555487329759_1182378501059881750_n.jpg?stp=dst-jpg_s96x96_tt6&ccb=11-4&oh=01_Q5Aa3QFd0nP2hIBVBtbjTvzN_qQHOio2a28CXU2QHxJPmvBEfA&oe=6951B91A&_nc_sid=5e03e0&_nc_cat=100',
+        contact_avatar: '/hugo.jpg',
         contact_unseen_messages: 0,
         last_message_content: 'Pudiste averiguar el precio?',
         last_message_state: 'SEEN',
