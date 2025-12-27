@@ -64,11 +64,12 @@
 }
 
 @media (max-width: 768px) {
-    .chat-screen-container{
-        display:inline-flex;
+    .chat-screen-container {
+        display: inline-flex;
     }
+
     .welcome-area {
-        display:none;
+        display: none;
     }
 
 }

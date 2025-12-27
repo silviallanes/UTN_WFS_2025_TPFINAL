@@ -2,12 +2,13 @@
 .aside-contactsidebar {
     display: flex;
     flex-direction: column;
-    width: 50%; 
+    width: 40%;
+    min-width: 320px;
     height: 100vh;
     border-right: 1px solid #d1d7db;
     background-color: #ffffff;
     overflow: hidden;
-    flex:1;
+    flex: 1;
 }
 
 /* Style del Header */
@@ -18,7 +19,6 @@
     padding: 10px 16px;
     height: 60px;
     background-color: #f0f2f5;
-    /*flex-shrink: 0;*/
 }
 
 .profile-container {
@@ -84,14 +84,12 @@
 /* Filter Buttons Container */
 .filter-buttons-container {
     display: flex;
-    gap: 18px;
+    gap: 10px;
+    flex-direction: row;
     padding: 8px 16px;
+    justify-content: flex-start;
     background-color: #ffffff;
-    /* Oculta scrollbar pero  permite el scroll si se necesita */
-    scrollbar-width: none;
-    /* Firefox */
-    overflow-x: auto;
-    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .filter-buttons-container::-webkit-scrollbar {
@@ -101,7 +99,7 @@
 
 /* Filter Button Styles */
 .filter-chip {
-   background-color: #f0f2f5;
+    background-color: #f0f2f5;
     color: #54656f;
     padding: 6px 16px;
     border: none;
@@ -120,6 +118,7 @@
     background-color: #d9fdd3;
     color: #008069;
 }
+
 .filter-chip.active:hover {
     background-color: #c8f7c0;
 }
@@ -141,18 +140,27 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
- .contact-sidebar {
-  flex: 0 0 30%;
-  max-width: 555px;
-  height: 100dvh;
+.contact-sidebar {
+    flex: 0 0 30%;
+    max-width: 555px;
+    height: 100dvh;
 }
 
 @media screen and (max-width: 768px) {
-  .contact-sidebar {
-    border-right: none;
-    max-width: 100%;
-  }
-  .filter-buttons-container{
-    display:none;
-  }
+    .contact-sidebar {
+        border-right: none;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .filter-buttons-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .contact-sidebar {
+        max-width: 100%;
+        min-width: 320px;
+    }
 }
