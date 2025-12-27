@@ -11,7 +11,7 @@ import { LuEllipsisVertical, LuMessageSquarePlus } from "react-icons/lu";
 export default function ContactSidebar() {
 
     return (
-        <aside className="aside">
+        <aside className="aside-contactsidebar">
             <header className="sidebar-header">
                 <div className="profile-container">
                     <div className="profile-pic-placeholder" title="Perfil">

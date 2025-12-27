@@ -38,9 +38,6 @@
     background-color: #f0f2f5;
 }
 
-.aside-dark .contact-item:hover {
-    background-color: #202c33;
-}
 
 /* Active State */
 .contact-item.active {
@@ -65,9 +62,6 @@
     /* Enable truncation in flex child */
 }
 
-.aside-dark .contact-info {
-    border-bottom: 1px solid #2f3b43;
-}
 
 /* Remove bottom border for the last item if needed, but WA keeps it usually */
 .contact-item:last-child .contact-info {
@@ -94,10 +88,6 @@
     line-height: normal;
 }
 
-.aside-dark .contact-name {
-    color: #e9edef;
-}
-
 .contact-date {
     font-size: 12px;
     color: #667781;
@@ -111,13 +101,6 @@
     font-weight: 500;
 }
 
-.aside-dark .contact-date {
-    color: #8696a0;
-}
-
-.aside-dark .contact-date.unread {
-    color: #25d366;
-}
 
 /* Bottom Row: Message Preview and Badge */
 .contact-bottom-row {
@@ -140,9 +123,6 @@
     align-items: center;
 }
 
-.aside-dark .contact-message-preview {
-    color: #8696a0;
-}
 
 /* Unread Badge */
 .contact-unread-badge {
@@ -162,24 +142,11 @@
     box-sizing: border-box;
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 600px) {
-    .contact-item {
-        padding: 0 10px;
-        height: 65px;
-    }
-
-    .contact-avatar {
-        width: 42px;
-        height: 42px;
-        margin-right: 12px;
-    }
-
-    .contact-name {
-        font-size: 16px;
-    }
-
-    .contact-message-preview {
-        font-size: 13px;
+/*Responsive*/
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
     }
 }

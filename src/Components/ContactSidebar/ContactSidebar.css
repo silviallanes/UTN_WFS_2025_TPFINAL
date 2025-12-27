@@ -1,17 +1,16 @@
 /* Basic Sidebar Layout */
-.aside {
+.aside-contactsidebar {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Por defecto ocupa el ancho disponible */
-    max-width: 450px;
-    min-width: 300px;
+    width: 50%; 
     height: 100vh;
     border-right: 1px solid #d1d7db;
     background-color: #ffffff;
     overflow: hidden;
+    flex:1;
 }
 
-/* Header Styles */
+/* Style del Header */
 .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -19,7 +18,7 @@
     padding: 10px 16px;
     height: 60px;
     background-color: #f0f2f5;
-    flex-shrink: 0;
+    /*flex-shrink: 0;*/
 }
 
 .profile-container {
@@ -88,7 +87,7 @@
     gap: 18px;
     padding: 8px 16px;
     background-color: #ffffff;
-    /* Hide scrollbar but allow scroll if needed */
+    /* Oculta scrollbar pero  permite el scroll si se necesita */
     scrollbar-width: none;
     /* Firefox */
     overflow-x: auto;
@@ -142,22 +141,6 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* Responsive Mobile Styles */
-/* @media (max-width: 900px) {
-    .aside {
-        width: 350px;
-    }
-}
-
-@media (max-width: 600px) {
-    .aside {
-        width: 100%;
-        max-width: 100%;
-        border-right: none;
-    }
-} */
  .contact-sidebar {
   flex: 0 0 30%;
   max-width: 555px;
@@ -168,5 +151,8 @@
   .contact-sidebar {
     border-right: none;
     max-width: 100%;
+  }
+  .filter-buttons-container{
+    display:none;
   }
 }

@@ -111,3 +111,11 @@
     width: 24px;
     height: 24px;
 }
+@media screen and (max-width: 768px){
+    .new-message-container {
+        width: 100%;
+    }
+    .new-message-form {
+        width: 95%;
+    }
+}

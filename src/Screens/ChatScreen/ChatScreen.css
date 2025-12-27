@@ -6,24 +6,8 @@
     width: 100%;
 }
 
-@media (max-width: 600px) {
-    .chat-screen-container .welcome-area {
-        display: none;
-    }
-}
-
-@media (max-width: 900px) {
-    .welcome-area {
-        padding: 0 20px;
-    }
-
-    .welcome-title {
-        font-size: 26px;
-    }
-}
-
 .welcome-area {
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,9 +38,6 @@
     margin-top: 28px;
 }
 
-.aside-dark .welcome-title {
-    color: #e9edef;
-}
 
 .welcome-text {
     font-size: 14px;
@@ -66,9 +47,6 @@
     margin-bottom: 30px;
 }
 
-.aside-dark .welcome-text {
-    color: #8696a0;
-}
 
 .welcome-footer {
     display: flex;
@@ -85,13 +63,12 @@
     fill: #8696a0;
 }
 
-/* Specific overrides for Dark Mode context if available on parent */
-.aside-dark~.welcome-area {
-    background-color: #222e35;
-    border-bottom: 6px solid #00a884;
-}
+@media (max-width: 768px) {
+    .chat-screen-container{
+        display:inline-flex;
+    }
+    .welcome-area {
+        display:none;
+    }
 
-/* If theme context isn't passed up, standard dark mode class if applied to body/parent */
-body.dark-theme .welcome-area {
-    background-color: #222e35;
 }

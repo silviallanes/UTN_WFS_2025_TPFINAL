@@ -4,7 +4,7 @@
     gap: 8px;
     width: 100%;
     height: 35px;
-    /* Fixed height for the search row */
+    /* Altura fija para la busqueda */
 }
 
 .search-bar {
@@ -25,31 +25,18 @@
     /* Slight highlight */
 }
 
-.aside-dark .search-bar {
-    background-color: #202c33;
-}
-
-.aside-dark .search-bar:focus-within {
-    background-color: #202c33;
-    /* Stays dark */
-    box-shadow: none;
-}
 
 .search-icon {
     color: #54656f;
     display: flex;
     align-items: center;
     margin-right: 28px;
-    /* Extra spacing if we want to match exact WA look where icon is left */
+    /* Extra espaciado if we want to match exact WA look where icon is left */
     margin-right: 12px;
-    /* Standard spacing */
+    /* espaciado standard */
     min-width: 24px;
     justify-content: center;
     cursor: text;
-}
-
-.aside-dark .search-icon {
-    color: #aebac1;
 }
 
 .search-icon svg {
@@ -64,15 +51,10 @@
     outline: none;
     width: 100%;
     font-size: 14px;
-    /* Standard message font size */
     color: #3b4a54;
-    padding: 0;
     line-height: 20px;
 }
 
-.aside-dark .search-input {
-    color: #d1d7db;
-}
 
 .search-input::placeholder {
     color: #54656f;
@@ -80,9 +62,6 @@
     /* Firefox fix */
 }
 
-.aside-dark .search-input::placeholder {
-    color: #8696a0;
-}
 
 .filter-btn {
     background: none;
@@ -99,13 +78,11 @@
 
 .filter-btn:hover {
     background-color: rgba(0, 0, 0, 0.05);
-    /* Very subtle hover */
+   
 }
 
-.aside-dark .filter-btn {
-    color: #aebac1;
-}
-
-.aside-dark .filter-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+@media screen and (max-width: 768px){
+    .search-bar {
+        display: none;
+    }
 }

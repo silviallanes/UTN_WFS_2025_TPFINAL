@@ -39,7 +39,7 @@ const ContactDetailContextProvider = () => {
     const providerValues = {
         contactSelected,
         addNewMessage,
-        loadingContactsState // Pass this down so consumers can handle loading
+        loadingContactsState 
     }
 
 
